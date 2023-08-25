@@ -156,7 +156,7 @@
 
                     <!-- box start -->
                     <div class="col-12 col-lg-7 col-xl-6 mt-5 mt-lg-0 wow slideInRight">
-                        <div class="row">
+                        <div class="row jarallax">
                             <div class="col-6">
                                 <div class="box-stats with-margin">
                                     <h3 class="poppins-font position-relative counter">12</h3>
@@ -196,7 +196,7 @@
         <!-- Skill Section Here -->
         <section class="container">
             <div class="row skill">
-                <div class="col-12">
+                <div class="col-12 jarallax">
                     <h3
                         class="text-uppercase pb-4 pb-sm-5 mb-3 mb-sm-0 text-left text-sm-center custom-title ft-wt-600">
                         MY SKILLS</h3>
@@ -247,7 +247,7 @@
                         class="text-uppercase pb-4 pb-sm-5 mb-3 mb-sm-0 text-left text-sm-center custom-title ft-wt-600">
                         EXPERIENCE & EDUCATION</h3>
                 </div>
-                <div class="col-lg-6 m-15px-tb">
+                <div class="col-lg-6 m-15px-tb jarallax">
                     <div class="resume-box">
                         <ul>
                             <li>
@@ -280,7 +280,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-6 m-15px-tb">
+                <div class="col-lg-6 m-15px-tb jarallax">
                     <div class="resume-box">
                         <ul>
                             <li>
@@ -327,17 +327,17 @@
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/337002c4cc.js" crossorigin="anonymous"></script>
     <script src="jquery.counterup.min.js"></script>
+    <script src="jarallax.min.js"></script>
     <script>
-        const { counterUp } = window.counterUp
+        // Vanilla JavaScript
+jarallax(document.querySelectorAll('.jarallax'), {
+  // options here
+});
 
-        const el = document.querySelector('.counter')
-
-        // Start counting, typically you need to call this when the 
-        // element becomes visible, or whenever you like.
-        counterUp(el, {
-            duration: 5000,
-            delay: 20,
-        })
+// Or jQuery
+$('.jarallax').jarallax({
+  // options here
+});
     </script>
 </body>
 
