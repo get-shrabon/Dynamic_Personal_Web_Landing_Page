@@ -131,10 +131,11 @@ header {
     }
     header {
       position: relative;
-      right: 0px;
+      left: 0px;
       bottom: 0;
       z-index: 3;
       display: flex;
+      justify-content: center;
       align-items: center;
       height: auto;
       top: 0px;
@@ -146,9 +147,9 @@ header {
     .navbar-nav {
       display: flex !important;
       flex-direction: row !important;
-      gap: 30px;
+      gap: 90px;
       justify-content: center;
-      margin-left: 50px;
+      margin-left: 0px;
     }
     .navbar-collapse {
       flex-basis: 0%;
