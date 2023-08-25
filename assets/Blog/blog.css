@@ -14,11 +14,10 @@ body {
   position: relative;
   background-size: cover;
   background-position: center;
-  height: 100%;
+  height: auto;
   width: 100%;
-  background-color: #111;
+  background-color: #111 !important;
 }
-
 /* Header Style Here */
 header {
   position: fixed;
@@ -104,12 +103,12 @@ header .icon-menu i {
   background-color: #ffb400;
 }
 .active {
-  background-color: #ffb400;
+  background-color: #ffb400 !important;
   border-radius: 50%;
 }
 .navbar-toggler {
   background-color: #2b2a2a;
-  border: 1px solid #ffb400;
+  border: 1px solid #ffb400 !important;
 }
 .navbar-toggler-icon {
   color: white !important;
@@ -132,11 +131,10 @@ header .icon-menu i {
   }
   header {
     position: relative;
-    left: 0;
+    right: 0px;
     bottom: 0;
     z-index: 3;
     display: flex;
-    justify-content: center;
     align-items: center;
     height: auto;
     top: 0px;
@@ -148,14 +146,23 @@ header .icon-menu i {
   .navbar-nav {
     display: flex !important;
     flex-direction: row !important;
-    gap: 90px;
-    justify-content: space-between;
-    margin-left: 0px;
+    gap: 30px;
+    justify-content: center;
+    margin-left: 50px;
   }
   .navbar-collapse {
     flex-basis: 0%;
     flex-grow: 1;
     align-items: center;
+  }
+  [type="button"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  button:not(:disabled) {
+    cursor: pointer;
+    position: relative;
+    left: 85px !important;
+    margin-right: 70px !important;
   }
 }
 
@@ -268,110 +275,88 @@ header .icon-menu i {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
   }
-  .home-details h1{
+  .home-details h1 {
     padding-left: 0px !important;
     text-align: center !important;
     font-size: 40px !important;
   }
-  .home-details h1::before{
-    /* position: absolute;
-    left: 200px;
-    top: 29px;
-    height: 4px;
-    width: 40px;
-    border-radius: 10px;
-    content: ""; */
+  .home-details h1::before {
     display: none;
   }
-  .home-details p{
+  .home-details p {
     width: 100% !important;
     text-align: center;
   }
-.s-center{
+  .s-center {
     text-align: center !important;
+  }
 }
-}
-[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
-    cursor: pointer;
-    position: relative;
-    left: 150px;
+[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled),
+button:not(:disabled) {
+  cursor: pointer;
+  position: relative;
+  left: 165px;
 }
 .navbar-toggler:focus {
   text-decoration: none;
   outline: 0;
   box-shadow: 0 0 0 black !important;
 }
-
 /* Header Style End */
 
-/* Main Style Here */
-.color-block {
-  position: fixed;
-  height: 200%;
+/* Page Title Style Here */
+.title-section {
+  margin: 0 auto;
   width: 100%;
-  transform: rotate(-15deg);
-  left: -83%;
-  top: -50%;
-  background-color: #ffb400;
-}
-.home-details-container {
-  width: 100%;
-  height: 100vh;
-}
-
-.bg {
-  background-image: url("../images/img-mobile.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
-  height: calc(100vh - 100px);
-  z-index: 111;
-  border-radius: 30px;
-  left: 40px;
-  top: 40px;
-  box-shadow: 0 0 7px rgba(0, 0, 0, 0.9);
-}
-.home-details h1 {
-  font-size: 51px;
-  line-height: 62px;
-  font-weight: 700;
-  margin: 18px 0 10px;
   position: relative;
-  padding-left: 70px;
+  padding: 80px 0;
+}
+.no-transform {
+  transform: none !important;
+}
+.revealator-delay1 {
+  transition-delay: 0.1s !important;
+}
+.title-section h1 {
+  font-size: 56px;
+  font-weight: 900;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0;
+}
+.title-section h1 span {
   color: #ffb400;
 }
-.poppins-font {
-  font-family: "Poppins", sans-serif;
-}
-.text-uppercase {
-  text-transform: uppercase !important;
-}
-.home-details h1::before {
+.title-bg {
+  font-size: 110px;
+  left: 0;
+  letter-spacing: 13px;
+  line-height: 0.7;
   position: absolute;
-  left: 200px;
-  top: 29px;
-  height: 4px;
-  width: 40px;
-  border-radius: 10px;
-  content: "";
+  right: 0;
+  top: 50%;
+  text-transform: uppercase;
+  font-weight: 800;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.07);
 }
-.home-details h1 span {
-  color: #fff;
-  display: block;
+
+@media screen and (max-width: 676px) {
+  .title-bg {
+    display: none;
+  }
+  .title-section {
+    text-align: center;
+    padding: 10px 0px;
+  }
 }
-.home-details h1:before {
-  background-color: #ffb400;
-}
-.home-details p {
-  margin: 15px 0 28px;
-  width: 600px;
-  margin: auto;
-  font-size: 18px;
-  line-height: 35px;
-}
-.open-sans-font {
-  font-family: sans-serif;
-}
+/* Page Title Style End */
 
 /* button */
 .button {
@@ -443,4 +428,61 @@ header .icon-menu i {
   border-radius: 50%;
 }
 /* button */
-/* Main Style End */
+
+
+/* Main Content Style Start */
+.card{
+    background-color: #2b2a2a !important;
+    overflow: hidden;
+}
+.card-title a{
+text-decoration: none;
+color: white;
+transition: .4s;
+margin-bottom: 5px !important;
+}
+.card-text{
+    color: white;
+    font-family: sans-serif;
+}
+.card-img-top{
+
+    transition: .4s !important;
+}
+.card-img{
+    overflow: hidden;
+    border-bottom: 4px solid #ffb400 !important;
+}
+.card:hover .card-title a{
+    color: #ffb400;
+}
+.card:hover .card-img-top{
+  scale: calc(130%);
+}
+
+.pagignation-number{
+    margin-top: 30px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.pagignation-number a{
+    text-decoration: none;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #2b2a2a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    transition: .4s ease-out all;
+}
+.pagignation-number a:hover{
+    background-color: #ffb400;
+}
+
+/* Main Content Style End */
