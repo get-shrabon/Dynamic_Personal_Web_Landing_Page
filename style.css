@@ -320,7 +320,7 @@ header .icon-menu i {
 }
 
 .bg {
-  background-image: url("../images/img-mobile.jpg");
+  background-image: url("./images/img-mobile.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
